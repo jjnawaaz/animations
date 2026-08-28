@@ -1,0 +1,119 @@
+<!-- KEYFRAMES  -->
+<!-- Important properties of clip-path -->
+
+
+ <!-- clip-path: circle(40%);
+ Create a circle whose radius is 40% of the reference box's size, centered by default. -->
+
+ <!-- You can explicitly control the center: -->
+<!-- circle(40% at 30% 70%)
+40%       → radius
+30%       → center X
+70%       → center Y -->
+
+<!-- ellipse(horizontal-radius vertical-radius) -->
+ <!-- ellipse(50% 35% at 30% 70%); -->
+<!-- 50% → horizontal radius
+35% → vertical radius
+30% → center X
+70% → center Y -->
+
+
+
+<!-- inset(top right bottom left) -->
+<!-- inset(10px 20px 30px 40px) -->
+<!-- top    = 10px
+right  = 20px
+bottom = 30px
+left   = 40px -->
+
+<!-- inset(20px) -->
+<!-- top    20
+right  20
+bottom 20
+left   20 -->
+
+<!-- inset(10px 20px) -->
+<!-- top/bottom = 10
+left/right = 20 -->
+
+<!-- inset(10px 20px 30px) -->
+<!-- top    = 10
+left/right = 20
+bottom = 30 -->
+
+<!-- POLYGON  -->
+<!-- clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%
+); -->
+<!-- Each pair is:
+
+x y -->
+<!-- (0%, 0%)       → top-left
+(100%, 0%)     → top-right
+(100%, 100%)   → bottom-right
+(0%, 100%)     → bottom-left -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+        flex-direction: column;  
+        row-gap: 5px;  
+        width: 100vw; 
+    }
+    .box1{
+        height: 300px;
+        width: 300px;
+        background-color: aqua; 
+        clip-path: circle(40%); 
+    }
+    .box2{
+        height: 300px;
+        width: 300px;
+        background-color: blue;  
+        clip-path: ellipse(50% 35%); 
+    }
+    .box3{
+        height: 300px;
+        width: 300px;
+        background-color: black;  
+        clip-path: inset(10px 20px 30px 50px); 
+    }
+    .box4{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(31, 115, 188);  
+    } 
+    
+</style>
+<body>
+     <!-- clip-path practice  -->
+     <div class="parent">   
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div>
+        <div class="box4">
+
+        </div>
+        
+     </div>
+</body>
+</html>

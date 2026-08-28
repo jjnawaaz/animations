@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .child-1{
+        height: 250px;
+        width: 400px;
+        clip-path: inset(10px 40px 30px 20px); 
+        /*         inset(top right bottom left)        */
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child-1">
+            
+        </div>
+    </div>
+</body>
+</html>

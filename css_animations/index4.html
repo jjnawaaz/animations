@@ -1,0 +1,84 @@
+<!-- KEYFRAMES  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+        flex-direction: column;
+        
+        row-gap: 5px;
+     
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .box1{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: aqua;   
+        animation: box1 1s ease infinite;
+
+    }
+    .box2{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: blue;   
+        animation: box1 1s ease-in infinite;
+
+    }
+    .box3{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: black;   
+        animation: box1 1s ease-in-out infinite;
+
+    }
+    .box4{
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        background-color: aliceblue;   
+        animation: box1 1s ease-out infinite;
+
+    }
+    @keyframes box1{
+        from{
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(300px);
+        }
+    }
+    
+   
+    
+</style>
+<body>
+     <!-- Keyframes practice  -->
+     <div class="parent">   
+        <div class="box1">
+
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div>
+        <div class="box4">
+
+        </div>
+        
+     </div>
+</body>
+</html>

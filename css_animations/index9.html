@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .triangle{
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        clip-path: polygon(
+            50% 0%, 100% 100%, 0% 100%, 0% 100%
+        );
+        transition: transform 1s ease-in, clip-path 1s ease-in;
+    }
+    .diamond{
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        clip-path: polygon(
+            50% 0%, 100% 50%, 50% 100%, 0% 50%
+        );
+        transition: clip-path 1s ease-in, transform 1.5s ease-in;
+    }
+    .shape{
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        clip-path: polygon(
+            50% 0%, 100% 0%, 50% 100%, 0% 100%
+        );
+    }
+    .diamond:hover{
+        clip-path: polygon(
+            0% 0%, 100% 0%, 100% 100%, 0% 100%
+        );
+        transform: scale(0.9);
+    }
+    .triangle:hover{
+         clip-path: polygon(
+            0% 0%, 100% 0%, 100% 100%, 0% 100%
+        );
+         transform: scale(0.9);
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="triangle">
+            
+        </div>
+        <div class="diamond">
+
+        </div>
+        <div class="shape">
+
+        </div>
+    </div>
+</body>
+</html>

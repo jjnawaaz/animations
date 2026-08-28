@@ -1,0 +1,74 @@
+<!-- KEYFRAMES  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 5px;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    .box{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background-color: aqua;
+        animation-name: loader;
+        animation-duration: 0.8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        
+    }
+    .bottom-box{
+        height: 5px;
+        width: 50px;
+        background-color: aqua;
+    }
+    @keyframes loader {
+        0%{
+            transform: translateY(0) scale(1);
+            opacity: 0.3;
+        }
+        25%{
+            transform: translateY(-10px) scale(1.1);
+            opacity: 0.5;
+        }
+        50%{
+            transform: translateY(-25px) scale(1.2);
+            opacity: 0.7;
+        }
+        75%{
+            transform: translateY(-40px) scale(1.3);
+            opacity: 0.9;
+        }
+        100%{
+            transform: translateY(-50px) scale(1.5);
+            opacity: 1;
+        }
+        
+    }
+</style>
+<body>
+     <!-- Keyframes practice  -->
+     <div class="parent">   
+        <div class="box">
+
+        </div>
+        <div class="bottom-box">
+
+        </div>
+     </div>
+</body>
+</html>
