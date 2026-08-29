@@ -1,0 +1,107 @@
+<!-- 1. linear-gradient() as a mask
+
+This is the one we're about to practice.
+
+General syntax:
+
+mask-image: linear-gradient(
+    direction,
+    color-stop-1,
+    color-stop-2,
+    ...
+);
+
+For example:
+
+mask-image: linear-gradient(
+    to right,
+    black,
+    transparent
+); -->
+
+<!-- You can also use angles:
+
+linear-gradient(90deg, ...)
+
+or:
+
+linear-gradient(45deg, ...) -->
+
+
+<!-- 3. Color stops
+
+Now we get more control.
+
+linear-gradient(
+    to right,
+    black 0%,
+    black 50%,
+    transparent 100%
+);
+
+This means:
+
+0%       → black
+50%      → black
+100%     → transparent -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    @property --radius {
+    syntax: "<length>";
+    initial-value: 50px;
+    inherits: false;
+}
+    .parent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+    }
+    .child-1{
+        background-color: black;
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+    .child-1 img{
+        --radius: 50px
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        mask-image: radial-gradient(
+            circle var(--radius),
+            black 0%,
+            transparent 100%
+        );
+        transition: --radius 0.7s ease-in-out;
+    }
+    .child-1 img:hover{
+           --radius: 300px
+    }
+   
+</style>
+<body>
+    <div class="parent">
+        <div class="child-1">
+            <img src="https://gamedaily.com/.image/MTU6MDAwMDAwMDAwMDU0MjMz/gta-6-lucia-boxing.jpg" alt="image">
+        </div>
+    </div>
+</body>
+</html>
