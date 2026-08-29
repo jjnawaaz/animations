@@ -1,0 +1,78 @@
+<!-- TIMING  AND STAGGER -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .parent{
+        height: 100vh;
+        width:100vw
+    }
+    .box-1{
+        height: 300px;
+        width: 300px;
+        background-color: greenyellow;
+         animation: animate-box-1 0.8s ease-in-out 0s forwards;
+    }
+    .box-2{
+        height: 300px;
+        width: 300px;
+        background-color: aquamarine;
+        animation: animate-box-1 0.8s ease-in-out 0.1s forwards;
+    }
+    .box-3{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(243, 171, 4);
+        animation: animate-box-1 0.8s ease-in-out 0.2s forwards;
+    }
+    .box-4{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(100, 243, 4);
+        animation: animate-box-1 0.8s ease-in-out 0.3s forwards;
+    }
+    .box-5{
+        height: 300px;
+        width: 300px;
+        background-color: rgb(243, 4, 223);
+        animation: animate-box-1 0.8s ease-in-out 0.4s forwards;
+    }
+    @keyframes animate-box-1{
+        from{
+              transform: translateX(0px);
+        }
+        to{
+              transform: translateX(300px);
+        }
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="box-1">
+
+        </div>
+        <div class="box-2">
+
+        </div>
+        <div class="box-3">
+
+        </div>
+        <div class="box-4">
+
+        </div>
+        <div class="box-5">
+
+        </div>
+    </div>
+</body>
+</html>
