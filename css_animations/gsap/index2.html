@@ -1,0 +1,46 @@
+<!-- GSAP BASICS  -->
+<!-- gsap.to() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box{
+        height: 500px;
+        width: 500px;
+        background-color: black;
+        margin: 200px;
+    }
+</style>
+<body>
+
+    <div class="box">
+
+    </div>
+
+     <!-- 2. Load the core GSAP library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+     <!-- 3. Write your custom GSAP animation code -->
+    <script>
+        // Animates the element with the class '.box'
+       gsap.fromTo(".box",{
+        x: -300, 
+        opacity:0,   // these are pixel units 
+        duration: 1    // seconds
+       },
+    {
+        x: 300, 
+        opacity: 1,   // these are pixel units 
+        duration: 1 
+    })
+    </script>
+</body>
+</html>
