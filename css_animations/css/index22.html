@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        perspective: 800px;
+    }
+    .parent{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        transition: transform 0.7s ease-in-out;
+    }
+    .front{
+        background-color: red;
+    }
+    .back{
+        background-color: blue;
+        transform: rotateY(180deg);
+    }
+   .front, .back{
+    position: absolute;
+    inset: 0;
+     backface-visibility: hidden;
+   }
+    .parent:hover{
+        transform: rotateY(180deg);
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="front">
+            Hello
+        </div>
+        <div class="back">
+            Hello from back 
+        </div>
+    </div>
+</body>
+</html>
