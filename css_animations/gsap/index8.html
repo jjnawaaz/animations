@@ -1,0 +1,49 @@
+<!-- GSAP Timeline -->
+<!-- GSAP BASICS  -->
+<!-- CALLBACKS  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box{
+        height: 500px;
+        width: 500px;
+        background-color: black;
+        margin: 200px;
+    }
+</style>
+<body>
+
+    <div class="box">
+
+    </div>
+
+     <!-- 2. Load the core GSAP library via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+     <!-- 3. Write your custom GSAP animation code -->
+    <script>
+        // Animates the element with the class '.box'
+       const t1 = gsap.timeline()
+       t1.to(".box",{
+        x: 300,
+        duration: 2,
+        onStart: () => console.log("START"),
+        onUpdate: () => console.log("UPDATE"),
+        onComplete: () => console.log("END")
+       })
+
+    </script>
+</body>
+</html>
