@@ -1,0 +1,56 @@
+<!-- FLIP  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+</style>
+<body>
+    <div class="container container-1">
+        <div class="box"></div>
+    </div>
+        <div class="container container-2"></div>
+    <button id="move">Move</button>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Flip.min.js"></script>
+<script>
+const box = document.querySelector(".box");
+const container2 = document.querySelector(".container-2");
+const container1 = document.querySelector(".container-1")
+let clicked = true
+document.querySelector("#move").addEventListener("click", () => {
+   
+    const state = Flip.getState(box);
+
+     if (clicked) {
+        container2.appendChild(box);
+    } else {
+        container1.appendChild(box);
+    }
+
+    Flip.from(state, {
+        duration: 1,
+        ease: "power2.inOut"
+    });
+    clicked = !clicked
+
+});
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!-- SET  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 300vh;
+    }
+    .box{
+        margin-top: 100vh;
+        height: 400px;
+        width: 400px;
+        background-color: black;
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script>
+    gsap.set('.box',{
+        scale: 1,
+        opacity:0
+    })
+    gsap.to(".box",{
+        opacity: 1,
+        x: 1000,
+        scrollTrigger:{
+            start: "top center",
+            end:"top top",
+            scrub: true,
+            markers: true
+        }
+    })
+</script>
+</html>
