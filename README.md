@@ -87,3 +87,7 @@ previous START
  ↑
 previous END
 
+
+
+GSAP ScrollTrigger - start / end.  start: element ( top - center - bottom ) viewport ( top - center - bottom)
+
