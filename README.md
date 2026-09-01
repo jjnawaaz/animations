@@ -91,6 +91,9 @@ previous END
 
 GSAP ScrollTrigger - start / end.  start: element ( top - center - bottom ) viewport ( top - center - bottom)
 
+GSAP 
+
+FLIP - First Last Invert Play
 
 
 MOUSE SCROLL - 

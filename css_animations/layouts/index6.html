@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bento{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 200px;
+        gap: 15px;
+    }
+    .bento div{
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="bento">
+        <div class="card-1">1</div>
+        <div class="card-2">2</div>
+        <div class="card-3">3</div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Flip.min.js"></script>
+<script>
+    gsap.registerPlugin(Flip);
+    const mm = gsap.matchMedia()
+    const mobile = "(max-width: 768px)"
+    const desktop = "(min-width: 769px)"
+    mm.add(mobile,()=>{
+        const state = Flip.getState(".bento div");
+        document.querySelector('.bento').style.gridTemplateColumns = "1fr";
+        Flip.from(state, {
+            duration: 0.5,
+            ease: "power2.out",
+            absolute: true // Prevents layout snapping during animation
+        });
+    })
+    mm.add(desktop,()=>{
+        const state = Flip.getState(".bento div");
+        document.querySelector('.bento').style.gridTemplateColumns = "repeat(3, 1fr)";
+        Flip.from(state, {
+            duration: 0.5,
+            ease: "power2.out",
+            absolute: true // Prevents layout snapping during animation
+        });
+    })
+</script>
+</html>
