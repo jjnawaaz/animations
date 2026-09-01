@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    svg{
+        background-color: red;
+    }
+</style>
+<body>
+    <svg id="animate-svg" width="100vw" height="160">
+  <path id="svg-path" d="M 10 80 Q 695 100 1450 80" stroke="black" fill="none" />
+</svg>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script>
+   const svg_path = document.querySelector("#svg-path")
+   const length = svg_path.getTotalLength()
+
+   gsap.set('#svg-path',{
+    strokeDasharray: length,            // dash after length 
+    strokeDashoffset: length            // offsets the line till length 
+   })
+
+   gsap.to("#svg-path",{
+    strokeDashoffset:0,                 // reveals the line slowly when it moves from length -> 0
+    duration: 2
+   })
+</script>
+</html>

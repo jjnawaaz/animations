@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .box{
+        height: 500px;
+        width: 500px;
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="box">
+    </div>
+</body>
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+        <script>
+            const box = document.querySelector(".box")
+            const span1 = document.createElement("span")
+            const span2 = document.createElement("span")
+            box.addEventListener("mousemove",(dets)=>{
+                span1.textContent = `x: ${dets.clientX}`
+                span2.textContent = `y: ${dets.clientY}`
+                box.appendChild(span1)
+                box.appendChild(span2)
+            })
+        </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <svg width="600" height="300">
+
+    <defs>
+        <clipPath id="circleClip">
+            <circle
+                cx="150"
+                cy="150"
+                r="0"
+            />
+        </clipPath>
+    </defs>
+
+    <rect
+        width="600"
+        height="300"
+        fill="red"
+        clip-path="url(#circleClip)"
+    />
+
+</svg>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script>
+    gsap.to("#circleClip circle", {
+    attr: {
+        r: 400
+    },
+    duration: 2
+});
+</script>
+</html>

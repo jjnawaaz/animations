@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <svg width="600" height="300">
+
+    <defs>
+        <mask id="reveal">
+            <rect
+                width=0
+                height="300"
+                fill="white"
+            />
+        </mask>
+    </defs>
+
+    <rect 
+        class="reveal-svg"
+        width="600"
+        height="300"
+        fill="red"
+        mask="url(#reveal)"
+    />
+
+</svg>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script>
+    const t1 = gsap.timeline()
+    t1.to("#reveal rect",{
+        attr: {
+            width:600
+        },
+        duration: 1
+    })
+</script>
+</html>
