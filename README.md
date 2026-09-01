@@ -91,3 +91,13 @@ previous END
 
 GSAP ScrollTrigger - start / end.  start: element ( top - center - bottom ) viewport ( top - center - bottom)
 
+
+
+MOUSE SCROLL - 
+
+LERP - formula - current += (target - current) * factor; 
+VELOCITY -  currentX = event.clientX -> velocityX = currentX - previousX -> previousX = currentX
+
+       
+
+       

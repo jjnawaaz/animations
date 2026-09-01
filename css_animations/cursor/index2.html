@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div class="box">
+        <button class="button">Click Me!</button>
+    </div>
+</body>
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+        <script>
+            const button = document.querySelector(".button")
+            const rect = button.getBoundingClientRect()
+            console.log(rect)
+            const buttonX = rect.left + rect.width / 2
+            const buttonY = rect.top + rect.height / 2
+
+            button.addEventListener("mousemove", (event) => {
+                const dx = event.clientX - buttonX;
+                const dy = event.clientY - buttonY;
+
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 100) {
+                    gsap.to(button, {
+                        x: dx * 0.3,
+                        y: dy * 0.3
+                    });
+                } else {
+                    gsap.to(button, {
+                        x: 0,
+                        y: 0
+                    });
+                }
+            });
+             button.addEventListener("mouseleave", (event) => {
+                gsap.to(button, {
+                        x: 0,
+                        y: 0
+                    })
+            });
+
+            
+        </script>
+</html>

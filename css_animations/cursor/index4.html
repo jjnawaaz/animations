@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .box {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+<script>
+    const box = document.querySelector(".box");
+
+    let previousX = 0;
+
+    window.addEventListener("mousemove", (event) => {
+
+        const currentX = event.clientX;
+
+        const velocityX = currentX - previousX;
+
+        previousX = currentX;
+
+        const scale = 1 + Math.abs(velocityX) * 0.01;
+
+        gsap.to(box, {
+            scale: scale,
+            duration: 0.2
+        });
+    });
+</script>
+
+</body>
+</html>
