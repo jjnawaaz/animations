@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-start;
+    }
+    .card{
+        height: 200px;
+        width: 200px;
+        background-color: black;
+    }
+
+    .container.expanded{
+        justify-content: end;
+        align-items: end;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="card">
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/Flip.min.js"></script>
+<script>
+    gsap.registerPlugin(Flip)
+
+    const container = document.querySelector(".container")
+    const card = document.querySelector(".card")
+
+    container.addEventListener("click",()=>{
+        
+        const state = Flip.getState(card)
+
+        container.classList.toggle("expanded")
+
+        Flip.from(state,{
+            duration: 1,
+            ease: "power2.inOut"
+        })
+
+    })
+</script>
+</html>
