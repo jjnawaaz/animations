@@ -101,6 +101,26 @@ MOUSE SCROLL -
 LERP - formula - current += (target - current) * factor; 
 VELOCITY -  currentX = event.clientX -> velocityX = currentX - previousX -> previousX = currentX
 
-       
 
+
+SMOOTH SCROLL - 
+
+
+lenis - smoothens the scroll can add lerp to increase and decrease the speed of scroll
+damping - can basically add sort of like speed lowering slowly when coming to rest
+Step 1 — Detect mouse velocity
+let currentX = event.clientX;
+
+velocityX = currentX - previousX;
+
+previousX = currentX;
+
+Step 2 — Move position using velocity
+
+positionX += velocityX;
+positionY += velocityY;
+
+Step 3 — Apply damping
+velocityX *= 0.9;
+velocityY *= 0.9;
        
