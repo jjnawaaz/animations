@@ -156,7 +156,7 @@ const Card = ({ props }) => {
       opacity: 1,
       transition: {
         type: "spring",
-        bounce: 0.5,
+        bounce: 0.2,
       },
     },
   };
