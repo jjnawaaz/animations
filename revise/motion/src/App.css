@@ -1,0 +1,67 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page{
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.hero-section{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem;
+  gap: 1.5rem;
+  color: white;
+}
+
+.hero-section p{
+  text-align: center;
+}
+
+.cards{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2;
+  height: 200px;
+  width: 100%;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card p{
+  text-align: center;
+}
+
+.button-section{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-section button{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  border: none;
+}
