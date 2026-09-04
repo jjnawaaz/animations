@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .page{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .hero{
+        display: flex;
+        height: 75%;
+        width: 100%;
+    }
+    .left-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        background-color: red;
+        margin: 30px 30px;
+        border-radius: 30px;
+    }
+    .left-section h1{
+       color:white;
+       letter-spacing: 6px;
+       animation: textAnimate ease-in-out 0.6s;
+    }
+    .right-section{
+        margin: 30px 30px;
+        border-radius: 30px;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(0, 0, 0);
+        overflow: hidden;
+    }
+    .right-section img{
+       display: inline-block;
+       height: 100%;
+       width: 100%;
+       object-fit: cover;
+       animation: imgAnimate ease-in-out 1s;
+    }
+    .button{
+        /* width: 100vw; */
+        margin-top: 30px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .button span{
+        background-color: rgb(255, 13, 0);
+         padding: 10px 20px;
+         border-radius: 6px;
+         transition: transform ease-in-out 0.1s;
+         color: white;
+    }
+    .button-element:hover{
+        transform: scale(1.1);
+    }
+
+
+     /* text animation  */
+     @keyframes textAnimate{
+        from {
+             transform: rotateX(180deg);
+             opacity: 0;
+        }
+        to {
+             opacity: 1;   
+             transform: rotateX(0deg);
+        }
+     }
+     /* Image animation  */
+     @keyframes imgAnimate{
+        from {
+             clip-path: circle(0%);
+        }
+        to {
+            clip-path: circle(70%);
+        }
+     }
+</style>
+<body>
+    <!-- full page  -->
+     <div class="page">
+        <div class="hero">
+            <div class="left-section">
+                <h1>Welcome to Scuderia Ferrari</h1>
+            </div>
+            <div class="right-section">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_UsOyuTZ7ovIlcwJw0VIEjfa2k5WLgWNAJAXt9_4NUw&s=10" alt="">
+            </div>
+        </div>
+        <div class="button">
+            <span class="button-element">
+                Hello
+            </span>
+        </div>
+     </div>
+</body>
+<script>
+</script>
+</html>

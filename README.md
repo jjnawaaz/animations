@@ -123,4 +123,38 @@ positionY += velocityY;
 Step 3 — Apply damping
 velocityX *= 0.9;
 velocityY *= 0.9;
+
+
+Framer Motion - 
+
+Variants 
+AnimatePresence - (conditional rendering)
+Stiffness and Damping
+Stiffness determines how strongly you want to reach the target.
+Motion Values - to hold values without causing re renders in react ( no need to use State variables )
+Layouts
+Damping determines how much you resist the movement/oscillation.
+
+
+
+
+GSAP AND FRAMER MOTION TOGETHER 
+
+  React
+                │
+        ┌───────┴────────┐
+        ↓                ↓
+ Framer Motion          GSAP
+        │                │
+ component state       timeline
+ layout               ScrollTrigger
+ exit/enter            SVG
+ springs               choreography
        
+Lenis
+  ↓
+smooth scroll
+  ↓
+ScrollTrigger.update()
+  ↓
+GSAP / ScrollTrigger
