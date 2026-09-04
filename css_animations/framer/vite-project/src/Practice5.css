@@ -1,0 +1,11 @@
+.box{
+    width:200px;
+    height: 200px;
+    background-color: black;
+}
+
+.expanded{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+}
