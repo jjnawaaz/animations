@@ -1,0 +1,74 @@
+.page{
+  width: 100vw;
+  background-color: red;
+  color: white;
+}
+
+.hero-section{
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+}
+
+.hero-section-left{
+  display: flex;
+  align-items: center;
+  background-color: black;
+  margin: 10px 20px;
+  border-radius: 10px;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  gap:50px;
+}
+
+.hero-section-left p{
+  text-align: center;
+  padding: 0px 30px;
+}
+
+.hero-section-right{
+  width: 50%;
+  border-radius: 10px;
+  margin: 10px 20px;
+  overflow: hidden;
+}
+
+.hero-section-right img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cards-section{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  padding: 0px 20px;
+}
+
+.card{
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.button-section{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 50px ;
+}
+.button-section button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+}
